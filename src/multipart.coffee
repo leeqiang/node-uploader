@@ -5,7 +5,6 @@ moment = require('moment')
 mv = require('mv')
 path = require('path')
 
-
 _rename = (dirname, name) ->
 	ext = path.extname(name)
 	fn = moment().format("YYYYMDHms")
@@ -36,6 +35,7 @@ exports = module.exports = multipart = (options) ->
 		_multipart req, res, (err) ->
 			for key, file of req.files
 				name = _rename(uploadDir, file.originalFilename)
+				file.destPath = path.resolve(name)
 				mv(
 					file.path,
 					name,
