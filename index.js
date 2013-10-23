@@ -1,1 +1,1 @@
-exports = require('./lib/multipart')
+exports = module.exports = require('./lib/multipart')

@@ -1,6 +1,12 @@
 ### Node-uploader
+属于一个express middleware;
 文件上传成功后移动到指定的目录.
-支持`/%Y/%M/%D or /YYYY/MM/DD`时间格式生成目录.
+支持`/%Y/%M/%D` or `/YYYY/MM/DD`时间格式生成目录.
+
+## Install
+```
+	npm install multipart2
+```
 
 ## Setup
 ```
